@@ -79,4 +79,12 @@ public class BookServiceTest {
 		bookService.addBook(bookRequest);
 	}
 
+	@Test
+	public void testSaveBookWithBookRequestWithGreaterPrice() {
+		BookRequest bookRequest = new BookRequest("Mockito for Beginners", 500, LocalDate.now());
+		Book book = new Book(null, "Mockito for Beginners", 500, LocalDate.now());
+//		doNothing().when(bookRepository).save(book);
+		bookService.addBook(bookRequest);
+	}
+
 }
