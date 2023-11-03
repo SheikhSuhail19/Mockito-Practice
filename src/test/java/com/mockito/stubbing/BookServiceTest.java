@@ -75,7 +75,7 @@ public class BookServiceTest {
 	public void testSaveBookWithBookRequest() {
 		BookRequest bookRequest = new BookRequest("Mockito for Beginners", 200, LocalDate.now());
 		Book book = new Book(null, "Mockito for Beginners", 200, LocalDate.now());
-		doNothing().when(bookRepository).save(book);
+//		doNothing().when(bookRepository).save(book);
 		bookService.addBook(bookRequest);
 	}
 

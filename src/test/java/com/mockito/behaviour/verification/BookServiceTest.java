@@ -6,6 +6,7 @@ import org.mockito.InOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
@@ -26,7 +27,12 @@ public class BookServiceTest {
 	@InjectMocks
 	private BookService bookService;
 
-	@Mock
+	// Behaviour verification works same for Spy as it does for Mock
+
+//	@Mock
+//	private BookRepository bookRepository;
+
+	@Spy
 	private BookRepository bookRepository;
 
 	@Test
